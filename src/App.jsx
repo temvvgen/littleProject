@@ -47,7 +47,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Танилцаж болох уу? ❤️</h1>
+      <h1>Надтай үеэрхээч HULU ❤️</h1>
       <div className="gif-container">
         <img
           src="https://media2.giphy.com/media/vFKqnCdLPNOKc/giphy.gif"
