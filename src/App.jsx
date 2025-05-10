@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import sound from "./assets/dieWithSmile.mp3";
 import axios from "axios";
+import { FaRegSmileWink } from "react-icons/fa";
 
 const App = () => {
   useEffect(() => {
@@ -75,7 +76,7 @@ const App = () => {
 
       <div className="overlay" id="overlay"></div>
       <div className="popup" id="popup">
-        <p>коммент дээр лайккккккккк</p>
+        <p>Би бичнээ хүлээж байгаарай {<FaRegSmileWink />} </p>
         <div className="gif-container2">
           <img
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2plYmNuaXR6Yjc5bDJ3ZDc3eWRmNnRyaDVrMWJpZWl6dWQ4NnFhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DffShiJ47fPqM/giphy.gif"
