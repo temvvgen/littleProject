@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import sound from "./assets/dieWithSmile.mp3";
+import axios from "axios";
 
 const App = () => {
   useEffect(() => {
@@ -30,10 +31,17 @@ const App = () => {
     };
   }, []);
 
-  const showSuccessPopup = () => {
+  const showSuccessPopup = async () => {
     document.getElementById("popup").style.display = "block";
     document.getElementById("overlay").style.display = "block";
     document.getElementById("sound").play();
+
+    try {
+      await axios.post("http://localhost:8800/api/click", { click: "yes" });
+      console.log("hadgallaa");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const closePopup = () => {
@@ -69,7 +77,7 @@ const App = () => {
         <div className="gif-container2">
           <img
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2plYmNuaXR6Yjc5bDJ3ZDc3eWRmNnRyaDVrMWJpZWl6dWQ4NnFhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DffShiJ47fPqM/giphy.gif"
-            alt="Haha gif"
+            alt="gif"
           />
         </div>
         <button onClick={closePopup}>За</button>
