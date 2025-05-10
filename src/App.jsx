@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import sound from "./assets/dieWithSmile.mp3";
-import { FaRegFaceKissWinkHeart } from "react-icons/fa6";
 
 const App = () => {
   useEffect(() => {
@@ -48,7 +47,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Маргааш болзох уу Боогий ❤️</h1>
+      <h1>Танилцаж болох уу? ❤️</h1>
       <div className="gif-container">
         <img
           src="https://media2.giphy.com/media/vFKqnCdLPNOKc/giphy.gif"
@@ -66,7 +65,7 @@ const App = () => {
 
       <div className="overlay" id="overlay"></div>
       <div className="popup" id="popup">
-        <p>Чи даагаарай {<FaRegFaceKissWinkHeart />} </p>
+        <p>коммент дээр лайккккккккк</p>
         <div className="gif-container2">
           <img
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2plYmNuaXR6Yjc5bDJ3ZDc3eWRmNnRyaDVrMWJpZWl6dWQ4NnFhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DffShiJ47fPqM/giphy.gif"
