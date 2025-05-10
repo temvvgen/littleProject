@@ -37,7 +37,9 @@ const App = () => {
     document.getElementById("sound").play();
 
     try {
-      await axios.post("http://localhost:8800/api/click", { click: "yes" });
+      await axios.post("https://littleproject.onrender.com/api/click", {
+        click: "yes",
+      });
       console.log("hadgallaa");
     } catch (error) {
       console.log(error);
