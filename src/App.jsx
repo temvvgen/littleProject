@@ -9,11 +9,14 @@ const App = () => {
     const overlay = document.getElementById("overlay");
 
     const handleHover = () => {
-      const containerWidth = window.innerWidth - noButton.offsetWidth;
-      const containerHeight = window.innerHeight - noButton.offsetHeight;
+      const container = document.querySelector(".container");
+      const containerRect = container.getBoundingClientRect();
 
-      const newX = Math.random() * containerWidth;
-      const newY = Math.random() * containerHeight;
+      const maxX = container.clientWidth - noButton.offsetWidth;
+      const maxY = container.clientHeight - noButton.offsetHeight;
+
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
 
       noButton.style.position = "absolute";
       noButton.style.left = `${newX}px`;
@@ -72,7 +75,6 @@ const App = () => {
         <button onClick={closePopup}>За</button>
       </div>
 
-      {/* ✅ MP3 аудио tag */}
       <audio id="sound" src={sound} preload="auto"></audio>
     </div>
   );
